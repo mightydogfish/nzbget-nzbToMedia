@@ -40,11 +40,13 @@ COPY root/ /
 RUN \
  mkdir /scripts 
 
-RUN \
- cd /scripts 
-
 RUN \ 
 git clone https://github.com/clinton-hall/nzbToMedia.git 
+
+COPY nzbToMedia/ /scripts/
+
+rm -rf \
+	/nzbToMedia
 
 RUN \ 
 ln -sf /usr/bin/python2.7 /usr/bin/python2
