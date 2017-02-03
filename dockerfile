@@ -41,12 +41,7 @@ RUN \
  mkdir /scripts 
 
 RUN \ 
-git clone https://github.com/clinton-hall/nzbToMedia.git 
-
-COPY nzbToMedia/ /scripts/
-
-rm -rf \
-	/nzbToMedia
+git clone https://github.com/clinton-hall/nzbToMedia.git /scripts 
 
 RUN \ 
 ln -sf /usr/bin/python2.7 /usr/bin/python2
